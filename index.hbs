@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ title }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <h1>{{ title }}</h1>
+  {{#if pokemons}}
+  <table id="pokemon">
+    {{#each pokemons}}
+    <tr>
+      <td>{{ desc }}</td>
+      <td><button onclick="location.href='{{ id }}' ">Details</button></td>
+    </tr>
+    {{/each}}
+  </table>
+  {{else}}
+  <p>no pokemons</p>
+  {{/if}}
+  <script src="bootstrap.js"></script>
+  <script src="jquery.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
