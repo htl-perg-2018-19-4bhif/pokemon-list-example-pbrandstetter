@@ -6,7 +6,7 @@
   "scripts": {
     "copy-bootstrap": "cpx ./node_modules/bootstrap/dist/css/bootstrap.css dist/ && cpx ./node_modules/bootstrap/dist/js/bootstrap.js dist/",
     "copy-jquery": "cpx ./node_modules/jquery/dist/jquery.js dist/",
-    "build": "cpx *.{html,css,hbs} dist/ && npm run copy-bootstrap && npm run copy-jquery && npm run copy-app",
+    "build": "cpx *.hbs dist/views && npm run copy-bootstrap && npm run copy-jquery && npm run copy-app",
     "start": "browser-sync start -c bs-config.js",
     "copy-app": "npx tsc && cpx ./app.js dist/"
   },
